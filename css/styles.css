@@ -763,6 +763,12 @@ textarea{ resize:vertical; min-height:130px; }
   box-shadow:0 10px 24px -10px rgba(11,61,61,.5);
 }
 
+@media (max-width: 768px){
+  section{ padding:36px 0 54px; }
+  .filters{ gap:8px; margin-bottom:24px; }
+  .filters button{ padding:8px 16px; font-size:.78rem; }
+}
+
 /* Newsletter band */
 .newsletter{
   padding:0 0 96px;
