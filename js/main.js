@@ -153,7 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length) {
+  const isMobile = window.innerWidth <= 768 || window.matchMedia('(hover: none)').matches;
+  if (isMobile) {
+    // Immediately show all reveal elements on mobile to prevent blank screens
+    revealEls.forEach(el => el.classList.add('in'));
+  } else if ('IntersectionObserver' in window && revealEls.length) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -161,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.02, rootMargin: '0px 0px 120px 0px' });
     revealEls.forEach(el => io.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('in'));

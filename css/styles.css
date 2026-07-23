@@ -86,7 +86,7 @@ body::before{
 /* ===========================================================
    SCROLL REVEAL — 3D tilt-into-light
    =========================================================== */
-@media (prefers-reduced-motion: no-preference){
+@media (prefers-reduced-motion: no-preference) and (min-width: 769px){
   .reveal{
     opacity:0;
     transform:perspective(1100px) rotateX(-9deg) translateY(34px) scale(.965);
@@ -95,8 +95,12 @@ body::before{
   }
   .reveal.in{ opacity:1; transform:perspective(1100px) rotateX(0deg) translateY(0) scale(1); }
 }
+@media (max-width: 768px){
+  .reveal{ opacity:1 !important; transform:none !important; }
+}
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
+  .reveal{ opacity:1 !important; transform:none !important; }
 }
 
 /* Staggered children within a revealed group */
