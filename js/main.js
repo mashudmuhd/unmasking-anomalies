@@ -131,7 +131,29 @@ function initCursorLight(){
   requestAnimationFrame(render);
 }
 
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  const storedTheme = localStorage.getItem('ua-theme') || 'dark';
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('ua-theme', theme);
+  }
+
+  // Initialize saved theme or default to dark
+  setTheme(storedTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initLightParticles();
   initTilt();
   initParallax();
