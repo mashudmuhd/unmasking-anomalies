@@ -1,0 +1,7 @@
+# Temporary screenshots
+images/*.png
+!images/logo.png
+
+# System files
+.DS_Store
+*.log
