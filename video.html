@@ -130,7 +130,10 @@
 
     <div class="article-nav-buttons">
       <a href="videos.html" class="btn btn-outline">← All Videos</a>
-      <a href="contact.html" class="btn btn-gold">Send Feedback / Question</a>
+      <a id="yt-channel-btn" href="https://www.youtube.com/@UnmaskingAtheism" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex; align-items:center; gap:8px;">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> Watch on YouTube Channel
+      </a>
+      <a href="contact.html" class="btn btn-outline">Send Question</a>
     </div>
   </div>
 </main>
@@ -182,7 +185,8 @@ const videosDB = {
     titleEn: "Response to Vaisakhan Thampi on Science & God",
     titleMl: "സയൻസും ദൈവവും: വൈശാഖൻ തമ്പിക്കുള്ള മറുപടി",
     desc: "A calm, structured walkthrough analyzing methodological naturalism versus theological belief, addressing popular claims about science disproving divine creation.",
-    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    embedUrl: "https://www.youtube-nocookie.com/embed/zG3V29wUqX4",
+    channelUrl: "https://www.youtube.com/@UnmaskingAtheism",
     timestamps: [
       { time: "00:00", topic: "Introduction to Methodological Naturalism" },
       { time: "05:20", topic: "Limits of Empirical Verification in Metaphysics" },
@@ -195,7 +199,8 @@ const videosDB = {
     titleEn: "Reacting to Fine-Tuning Critique",
     titleMl: "രവി കണ്ട ‘പതെറ്റിക്ക്’ ഫൈൻ ട്യൂണിങ്",
     desc: "Deconstructing common objections to physical constants and cosmological fine-tuning arguments with mathematical rigor.",
-    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    embedUrl: "https://www.youtube-nocookie.com/embed/e9N_mQoJ1fE",
+    channelUrl: "https://www.youtube.com/@UnmaskingAtheism",
     timestamps: [
       { time: "00:00", topic: "Defining Cosmological Fine-Tuning" },
       { time: "04:15", topic: "The Gravitational Constant & Cosmological Constant" },
@@ -207,7 +212,8 @@ const videosDB = {
     titleEn: "Debate Analysis: Javed Akhtar vs Mufti Shamail Nadwi",
     titleMl: "ജാവേദ് അക്തർ സംവാദം: യുക്തിഭദ്രമായ വിശകലനം",
     desc: "An in-depth logical and rhetorical breakdown of the high-profile North India inter-faith debate on morality and revelation.",
-    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    embedUrl: "https://www.youtube-nocookie.com/embed/Wd-h-L_n7k8",
+    channelUrl: "https://www.youtube.com/@UnmaskingAtheism",
     timestamps: [
       { time: "00:00", topic: "Overview of the Debate Premise" },
       { time: "06:30", topic: "Objective Morality without Divine Command" },
@@ -219,7 +225,8 @@ const videosDB = {
     titleEn: "Quantum Physics is Not Magic!",
     titleMl: "ക്വാണ്ടം ഫിസിക്സ് മാജിക്കല്ല",
     desc: "Reacting to modern popular science blunders and explaining quantum mechanics and wave function collapse in plain terms.",
-    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    embedUrl: "https://www.youtube-nocookie.com/embed/U70dCq6cZ0U",
+    channelUrl: "https://www.youtube.com/@UnmaskingAtheism",
     timestamps: [
       { time: "00:00", topic: "Common Quantum Misconceptions" },
       { time: "05:50", topic: "Wave-Particle Duality Explained" },
@@ -231,7 +238,8 @@ const videosDB = {
     titleEn: "Reacting to Science and Religion Arguments",
     titleMl: "മാറുന്ന സയൻസും മാറാത്ത മതവും",
     desc: "Addressing the shifting paradigm of scientific theories versus absolute metaphysical truths.",
-    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    embedUrl: "https://www.youtube-nocookie.com/embed/Z9g5T4dE2iY",
+    channelUrl: "https://www.youtube.com/@UnmaskingAtheism",
     timestamps: [
       { time: "00:00", topic: "The Evolution of Scientific Paradigms" },
       { time: "07:20", topic: "Scientific Realism vs Instrumentalism" },
@@ -243,7 +251,8 @@ const videosDB = {
     titleEn: "Exposing Big Blunders by Arif Hussain Theruvath",
     titleMl: "ആരിഫ് ഹുസൈൻ തെരുവത്തിന്റെ പിഴവുകൾ",
     desc: "Fact-checking historical and scientific claims made in contemporary atheist lectures.",
-    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    embedUrl: "https://www.youtube-nocookie.com/embed/3xY8a7W1J3E",
+    channelUrl: "https://www.youtube.com/@UnmaskingAtheism",
     timestamps: [
       { time: "00:00", topic: "Fact-Checking Historical Claims" },
       { time: "08:15", topic: "Textual & Linguistic Errors Addressed" },
@@ -263,6 +272,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('video-thumb-title').textContent = data.titleEn;
   document.getElementById('video-title-ml').textContent = data.titleMl;
   document.getElementById('video-desc').textContent = data.desc;
+  
+  if (data.channelUrl) {
+    document.getElementById('yt-channel-btn').href = data.channelUrl;
+  }
 
   const timestampsList = document.getElementById('video-timestamps-list');
   timestampsList.innerHTML = data.timestamps.map(ts => `
