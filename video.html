@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video — Unmasking Anomalies</title>
+  <meta name="description" content="Watch in-depth video analyses on faith, science, and history on Unmasking Anomalies.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .video-hero-container {
+      max-width: 960px; margin: 40px auto 30px;
+    }
+    .video-player-frame {
+      position: relative; width: 100%; aspect-ratio: 16/9;
+      background: #000; border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.8);
+      border: 1px solid var(--glass-dark-border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .video-player-frame iframe {
+      width: 100%; height: 100%; border: 0;
+    }
+    .video-thumbnail-placeholder {
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at center, rgba(31, 158, 158, 0.25), rgba(4, 20, 20, 0.95)),
+                  var(--star-tile);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 16px; cursor: pointer; text-align: center; padding: 20px;
+    }
+    .play-btn-pulse {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
+      color: #041414; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 30px rgba(245, 212, 114, 0.6);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .video-thumbnail-placeholder:hover .play-btn-pulse {
+      transform: scale(1.12);
+      box-shadow: 0 0 45px rgba(245, 212, 114, 0.85);
+    }
+    .video-details-box {
+      max-width: 960px; margin: 32px auto 60px;
+    }
+    .video-title-main {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 12px; line-height: 1.25;
+    }
+    .video-subtitle-ml {
+      font-size: 1.3rem; color: var(--gold-300); margin-bottom: 20px; font-family: var(--display);
+    }
+    .video-timestamps-card {
+      background: var(--glass-dark-bg); border: 1px solid var(--glass-dark-border);
+      border-radius: var(--radius); padding: 28px; margin-top: 32px;
+    }
+    .video-timestamps-card h4 { color: var(--gold-300); margin-bottom: 16px; font-size: 1.15rem; }
+    .video-timestamps-card ul { list-style: none; padding: 0; margin: 0; }
+    .video-timestamps-card li {
+      padding: 10px 0; border-bottom: 1px solid var(--line);
+      display: flex; gap: 16px; font-size: 0.95rem; color: var(--ink);
+    }
+    .video-timestamps-card li:last-child { border-bottom: 0; }
+    .timestamp-badge {
+      font-family: monospace; font-weight: 700; color: var(--gold-300);
+      background: rgba(245, 212, 114, 0.12); padding: 2px 10px; border-radius: 6px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img src="images/logo.svg" alt="Unmasking Anomalies Logo"></span>
+      <span class="brand-text"><span class="en">Unmasking Anomalies</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="videos.html" class="active">Videos</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span><em>Science &amp; Faith</em> — <em>Fine-Tuning</em> — <em>Debates</em> — <em>Quantum Mechanics</em> — <em>Unmasking Anomalies</em></span>
+    <span><em>Science &amp; Faith</em> — <em>Fine-Tuning</em> — <em>Debates</em> — <em>Quantum Mechanics</em> — <em>Unmasking Anomalies</em></span>
+  </div>
+</div>
+
+<main class="container">
+  <div style="margin-top:40px;">
+    <a href="videos.html" class="article-back-link" style="display:inline-flex; align-items:center; gap:8px; font-size:.85rem; font-weight:600; color:var(--gold-300);">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Videos
+    </a>
+  </div>
+
+  <div class="video-hero-container">
+    <div class="video-player-frame" id="video-frame">
+      <div class="video-thumbnail-placeholder" id="play-trigger">
+        <div class="play-btn-pulse">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <h3 id="video-thumb-title" style="color:#faf8f3; font-size:1.4rem; max-width:80%;">Video Title Loading...</h3>
+        <span style="font-size:0.85rem; color:var(--gold-300);">Click to Play Video</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-details-box">
+    <div id="video-tag" class="breadcrumb" style="margin-bottom:10px;">Science &amp; Faith</div>
+    <h1 id="video-title-en" class="video-title-main">Video Title Loading...</h1>
+    <div id="video-title-ml" class="video-subtitle-ml"></div>
+    <p id="video-desc" style="font-size:1.1rem; line-height:1.7; color:var(--ink-soft);"></p>
+
+    <div class="video-timestamps-card">
+      <h4>Key Video Timestamps &amp; Discussion Points</h4>
+      <ul id="video-timestamps-list">
+        <li><span class="timestamp-badge">00:00</span><span>Introduction &amp; Context</span></li>
+      </ul>
+    </div>
+
+    <div class="article-nav-buttons">
+      <a href="videos.html" class="btn btn-outline">← All Videos</a>
+      <a href="contact.html" class="btn btn-gold">Send Feedback / Question</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark"><img src="images/logo.svg" alt="Unmasking Anomalies Logo"></span>
+          <span class="en">Unmasking Anomalies</span>
+        </div>
+        <p style="font-size:.88rem; max-width:32ch;">Sourced video presentations and debates on belief, science, and history.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="videos.html">Science &amp; Faith</a></li>
+          <li><a href="videos.html">Debates &amp; Analysis</a></li>
+          <li><a href="videos.html">Factual Atheism</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <p style="font-size:.86rem;">Have a topic suggestion?</p>
+        <a href="contact.html" class="btn btn-gold" style="padding:8px 20px; font-size:.8rem; margin-top:8px;">Contact Team</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Unmasking Anomalies. All rights reserved.</span>
+      <span><a href="contact.html">hello@unmasking-anomalies.org</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const videosDB = {
+  "vaisakhan": {
+    category: "Science & Faith",
+    titleEn: "Response to Vaisakhan Thampi on Science & God",
+    titleMl: "സയൻസും ദൈവവും: വൈശാഖൻ തമ്പിക്കുള്ള മറുപടി",
+    desc: "A calm, structured walkthrough analyzing methodological naturalism versus theological belief, addressing popular claims about science disproving divine creation.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    timestamps: [
+      { time: "00:00", topic: "Introduction to Methodological Naturalism" },
+      { time: "05:20", topic: "Limits of Empirical Verification in Metaphysics" },
+      { time: "12:45", topic: "Addressing Specific Arguments on Causality" },
+      { time: "18:30", topic: "Summary & Conclusion" }
+    ]
+  },
+  "finetuning": {
+    category: "Science & Faith",
+    titleEn: "Reacting to Fine-Tuning Critique",
+    titleMl: "രവി കണ്ട ‘പതെറ്റിക്ക്’ ഫൈൻ ട്യൂണിങ്",
+    desc: "Deconstructing common objections to physical constants and cosmological fine-tuning arguments with mathematical rigor.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    timestamps: [
+      { time: "00:00", topic: "Defining Cosmological Fine-Tuning" },
+      { time: "04:15", topic: "The Gravitational Constant & Cosmological Constant" },
+      { time: "11:10", topic: "Multiverse Hypothesis vs Teleological Design" }
+    ]
+  },
+  "javedakhtar": {
+    category: "Debates & Analysis",
+    titleEn: "Debate Analysis: Javed Akhtar vs Mufti Shamail Nadwi",
+    titleMl: "ജാവേദ് അക്തർ സംവാദം: യുക്തിഭദ്രമായ വിശകലനം",
+    desc: "An in-depth logical and rhetorical breakdown of the high-profile North India inter-faith debate on morality and revelation.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    timestamps: [
+      { time: "00:00", topic: "Overview of the Debate Premise" },
+      { time: "06:30", topic: "Objective Morality without Divine Command" },
+      { time: "15:00", topic: "Historical Records & Textual Authority" }
+    ]
+  },
+  "quantum": {
+    category: "Factual Atheism",
+    titleEn: "Quantum Physics is Not Magic!",
+    titleMl: "ക്വാണ്ടം ഫിസിക്സ് മാജിക്കല്ല",
+    desc: "Reacting to modern popular science blunders and explaining quantum mechanics and wave function collapse in plain terms.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    timestamps: [
+      { time: "00:00", topic: "Common Quantum Misconceptions" },
+      { time: "05:50", topic: "Wave-Particle Duality Explained" },
+      { time: "12:10", topic: "Why Quantum Randomness Does Not Mean Chaos" }
+    ]
+  },
+  "sciencereligion": {
+    category: "Science & Faith",
+    titleEn: "Reacting to Science and Religion Arguments",
+    titleMl: "മാറുന്ന സയൻസും മാറാത്ത മതവും",
+    desc: "Addressing the shifting paradigm of scientific theories versus absolute metaphysical truths.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    timestamps: [
+      { time: "00:00", topic: "The Evolution of Scientific Paradigms" },
+      { time: "07:20", topic: "Scientific Realism vs Instrumentalism" },
+      { time: "14:00", topic: "Harmonizing Science & Divine Revelation" }
+    ]
+  },
+  "arifhussain": {
+    category: "Debates & Analysis",
+    titleEn: "Exposing Big Blunders by Arif Hussain Theruvath",
+    titleMl: "ആരിഫ് ഹുസൈൻ തെരുവത്തിന്റെ പിഴവുകൾ",
+    desc: "Fact-checking historical and scientific claims made in contemporary atheist lectures.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+    timestamps: [
+      { time: "00:00", topic: "Fact-Checking Historical Claims" },
+      { time: "08:15", topic: "Textual & Linguistic Errors Addressed" },
+      { time: "16:40", topic: "Concluding Remarks" }
+    ]
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const videoId = urlParams.get('id') || 'vaisakhan';
+  const data = videosDB[videoId] || videosDB['vaisakhan'];
+
+  document.title = data.titleEn + " — Unmasking Anomalies";
+  document.getElementById('video-tag').textContent = data.category;
+  document.getElementById('video-title-en').textContent = data.titleEn;
+  document.getElementById('video-thumb-title').textContent = data.titleEn;
+  document.getElementById('video-title-ml').textContent = data.titleMl;
+  document.getElementById('video-desc').textContent = data.desc;
+
+  const timestampsList = document.getElementById('video-timestamps-list');
+  timestampsList.innerHTML = data.timestamps.map(ts => `
+    <li>
+      <span class="timestamp-badge">${ts.time}</span>
+      <span>${ts.topic}</span>
+    </li>
+  `).join('');
+
+  document.getElementById('play-trigger').addEventListener('click', () => {
+    document.getElementById('video-frame').innerHTML = `
+      <iframe src="${data.embedUrl}?autoplay=1" title="${data.titleEn}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    `;
+  });
+});
+</script>
+
+</body>
+</html>

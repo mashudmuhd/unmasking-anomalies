@@ -1,207 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Articles — Unmasking Anomalies</title>
-<meta name="description" content="Articles analyzing patterns, anomalies, history, and evidence.">
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles — Unmasking Anomalies</title>
+  <meta name="description" content="Articles analyzing patterns, anomalies, history, and evidence.">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-<div id="scroll-progress"></div>
-<canvas id="light-particles" aria-hidden="true"></canvas>
+  <div id="scroll-progress"></div>
+  <canvas id="light-particles" aria-hidden="true"></canvas>
 
-<header class="site-header">
-  <nav class="nav container">
-    <a href="index.html" class="brand">
-      <span class="brand-mark"><img src="images/logo.svg" alt="Unmasking Anomalies Logo"></span>
-      <span class="brand-text"><span class="en">Unmasking Anomalies</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="articles.html" class="active">Articles</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
-      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><img src="images/logo.svg" alt="Unmasking Anomalies Logo"></span>
+        <span class="brand-text"><span class="en">Unmasking Anomalies</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </nav>
+  </header>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span><em>The True Path</em> — <em>Factual Atheism</em> — <em>Creed</em> — <em>Qur'an</em> — <em>Prophethood</em> — <em>History</em> — <em>Science &amp; Faith</em> — <em>Unmasking Anomalies</em></span>
-    <span><em>The True Path</em> — <em>Factual Atheism</em> — <em>Creed</em> — <em>Qur'an</em> — <em>Prophethood</em> — <em>History</em> — <em>Science &amp; Faith</em> — <em>Unmasking Anomalies</em></span>
-  </div>
-</div>
-
-<section class="page-header">
-  <div class="light-rays-wrap" data-parallax="0.06"><div class="light-rays"></div></div>
-  <div class="container">
-    <div class="breadcrumb">Home / Articles</div>
-    <h1>Articles</h1>
-    <p style="max-width:56ch; color:rgba(250,248,243,.8); font-family:var(--accent-script); font-style:italic; font-size:1.2rem;">Sourced writing on belief, the Qur'an, history, and the questions people actually ask.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="filters">
-      <button class="active" data-filter="all">All</button>
-      <button data-filter="creed">Creed</button>
-      <button data-filter="quran">Qur'an</button>
-      <button data-filter="prophet">The Prophet ﷺ</button>
-      <button data-filter="atheism">Factual Atheism</button>
-      <button data-filter="criticism">Islamic &amp; Criticism</button>
-    </div>
-
-    <div class="card-grid">
-
-      <article class="card" data-category="prophet">
-        <div class="card-media"><div class="pattern"></div><span class="tag">The Prophet ﷺ</span></div>
-        <div class="card-body">
-          <span class="card-meta">Jan 7, 2026</span>
-          <h3>Evidences of Prophethood (പ്രവാചകത്വത്തിന്റെ തെളിവുകൾ)</h3>
-          <p>A rigorous two-part historical, textual, and character-based analysis of the proofs supporting the prophethood of Muhammad ﷺ.</p>
-          <a href="article.html?id=prophethood" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="quran">
-        <div class="card-media"><div class="pattern"></div><span class="tag">Qur'an</span></div>
-        <div class="card-body">
-          <span class="card-meta">Dec 28, 2024</span>
-          <h3>Embryology in the Qur'an &amp; Hadith (ഭ്രൂണ ശാസ്ത്രം)</h3>
-          <p>Examining classical linguistic commentary, Arabic terminology, and textual context regarding stages of human development.</p>
-          <a href="article.html?id=embryology" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="atheism">
-        <div class="card-media"><div class="pattern"></div><span class="tag">Factual Atheism</span></div>
-        <div class="card-body">
-          <span class="card-meta">Dec 27, 2024</span>
-          <h3>The Superstition of Coincidence (യാദൃശ്ചികത എന്ന അന്ധവിശ്വാസം)</h3>
-          <p>Deconstructing pure chance and examining teleological fine-tuning arguments in cosmology and biology.</p>
-          <a href="article.html?id=coincidence" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="criticism">
-        <div class="card-media"><div class="pattern"></div><span class="tag">Islamic &amp; Criticism</span></div>
-        <div class="card-body">
-          <span class="card-meta">Jan 7, 2026</span>
-          <h3>Slavery &amp; Historical Context in Islam (അടിമത്തവും ഇസ്ലാമിക നിലപാടും)</h3>
-          <p>A comprehensive look at emancipation incentives, legal rights, and seventh-century socio-economic realities.</p>
-          <a href="article.html?id=slavery" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="prophet">
-        <div class="card-media"><div class="pattern"></div><span class="tag">The Prophet ﷺ</span></div>
-        <div class="card-body">
-          <span class="card-meta">Dec 28, 2024</span>
-          <h3>Aisha (ra) Marriage: Historical Norms (ആയിഷ (റ) വിവാഹം)</h3>
-          <p>Placing historical record and age consensus in the context of antiquity versus modern polemical misreadings.</p>
-          <a href="article.html?id=aisha" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="creed">
-        <div class="card-media"><div class="pattern"></div><span class="tag">Creed</span></div>
-        <div class="card-body">
-          <span class="card-meta">Dec 27, 2024</span>
-          <h3>Is Islam the True Message of God? (ഇസ്‌ലാമാണോ ദൈവസന്ദേശം?)</h3>
-          <p>Analyzing the rational case for monotheism, moral coherence, and divine revelation.</p>
-          <a href="article.html?id=is-islam-true" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="atheism">
-        <div class="card-media"><div class="pattern"></div><span class="tag">Factual Atheism</span></div>
-        <div class="card-body">
-          <span class="card-meta">Jan 7, 2026</span>
-          <h3>Fine-Tuning &amp; The Universe (ഫൈൻ ട്യൂണിങ് തത്വം)</h3>
-          <p>A scientific and philosophical walkthrough of cosmological fine-tuning and physical constants.</p>
-          <a href="article.html?id=fine-tuning" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="criticism">
-        <div class="card-media"><div class="pattern"></div><span class="tag">Islamic &amp; Criticism</span></div>
-        <div class="card-body">
-          <span class="card-meta">Jan 7, 2026</span>
-          <h3>Women's Freedom in Islam (ഇസ്‌ലാമും സ്ത്രീ സ്വാതന്ത്ര്യവും)</h3>
-          <p>Deconstructing orientalist caricatures and examining women's legal rights and status in Islamic jurisprudence.</p>
-          <a href="article.html?id=womens-rights" class="card-link">Read Full Article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="card" data-category="history">
-        <div class="card-media"><div class="pattern"></div><span class="tag">History</span></div>
-        <div class="card-body">
-          <span class="card-meta">Nov 15, 2025</span>
-          <h3>Andalusia: Three Faiths, One City</h3>
-          <p>A look at coexistence and conflict in Islamic Spain, without romanticizing either.</p>
-          <a href="#" class="card-link">Read article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="section-foot"><a href="#" class="btn btn-dark">Load More Articles</a></div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <span class="brand-mark"><img src="images/logo.svg" alt="Unmasking Anomalies Logo"></span>
-          <span class="en">Unmasking Anomalies</span>
-        </div>
-        <p>A platform dedicated to uncovering patterns, analyzing edge cases, and explaining anomalies with clarity, patience, and evidence.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="videos.html">Videos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Topics</h4>
-        <ul>
-          <li><a href="articles.html">Creed</a></li>
-          <li><a href="articles.html">Qur'an</a></li>
-          <li><a href="articles.html">The Prophet ﷺ</a></li>
-          <li><a href="articles.html">History</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Stay Connected</h4>
-        <p>Follow along for new articles and videos as they're published.</p>
-        <div class="social-row">
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.7-2-2C18.7 4.2 12 4.2 12 4.2s-6.7 0-8.5.5c-1 .3-1.7 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.8.5 8.5.5 8.5.5s6.7 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3zM9.8 15.3V8.7l6 3.3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6a4 4 0 100 8 4 4 0 000-8zm5.2-.9a1 1 0 110 2 1 1 0 010-2z"/></svg></a>
-          <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M3 3l7.5 9.5L3.4 21H6l6-6.8L17 21h4l-7.9-10L20.6 3H18l-5.6 6.4L8 3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Unmasking Anomalies. All rights reserved.</span>
-      <span><a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Privacy</a></span>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><em>The True Path</em> — <em>Factual Atheism</em> — <em>Creed</em> — <em>Qur'an</em> — <em>Prophethood</em>
+        — <em>History</em> — <em>Science &amp; Faith</em> — <em>Unmasking Anomalies</em></span>
+      <span><em>The True Path</em> — <em>Factual Atheism</em> — <em>Creed</em> — <em>Qur'an</em> — <em>Prophethood</em>
+        — <em>History</em> — <em>Science &amp; Faith</em> — <em>Unmasking Anomalies</em></span>
     </div>
   </div>
-</footer>
 
-<script src="js/main.js"></script>
+  <section class="page-header">
+    <div class="light-rays-wrap" data-parallax="0.06">
+      <div class="light-rays"></div>
+    </div>
+    <div class="container">
+      <div class="breadcrumb">Home / Articles</div>
+      <h1>Articles</h1>
+      <p
+        style="max-width:56ch; color:rgba(250,248,243,.8); font-family:var(--accent-script); font-style:italic; font-size:1.2rem;">
+        Sourced writing on belief, the Qur'an, history, and the questions people actually ask.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="creed">Creed</button>
+        <button data-filter="quran">Qur'an</button>
+        <button data-filter="prophet">The Prophet ﷺ</button>
+        <button data-filter="atheism">Factual Atheism</button>
+        <button data-filter="criticism">Islamic &amp; Criticism</button>
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card" data-category="prophet">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">The Prophet ﷺ</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Jan 7, 2026</span>
+            <h3>Evidences of Prophethood (പ്രവാചകത്വത്തിന്റെ തെളിവുകൾ)</h3>
+            <p>A rigorous two-part historical, textual, and character-based analysis of the proofs supporting the
+              prophethood of Muhammad ﷺ.</p>
+            <a href="article.html?id=prophethood" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="quran">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">Qur'an</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Dec 28, 2024</span>
+            <h3>Embryology in the Qur'an &amp; Hadith (ഭ്രൂണ ശാസ്ത്രം)</h3>
+            <p>Examining classical linguistic commentary, Arabic terminology, and textual context regarding stages of
+              human development.</p>
+            <a href="article.html?id=embryology" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="atheism">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">Factual Atheism</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Dec 27, 2024</span>
+            <h3>The Superstition of Coincidence (യാദൃശ്ചികത എന്ന അന്ധവിശ്വാസം)</h3>
+            <p>Deconstructing pure chance and examining teleological fine-tuning arguments in cosmology and biology.</p>
+            <a href="article.html?id=coincidence" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="criticism">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">Islamic &amp; Criticism</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Jan 7, 2026</span>
+            <h3>Slavery &amp; Historical Context in Islam (അടിമത്തവും ഇസ്ലാമിക നിലപാടും)</h3>
+            <p>A comprehensive look at emancipation incentives, legal rights, and seventh-century socio-economic
+              realities.</p>
+            <a href="article.html?id=slavery" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="prophet">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">The Prophet ﷺ</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Dec 28, 2024</span>
+            <h3>Aisha (ra) Marriage: Historical Norms (ആയിഷ (റ) വിവാഹം)</h3>
+            <p>Placing historical record and age consensus in the context of antiquity versus modern polemical
+              misreadings.</p>
+            <a href="article.html?id=aisha" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="creed">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">Creed</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Dec 27, 2024</span>
+            <h3>Is Islam the True Message of God? (ഇസ്‌ലാമാണോ ദൈവസന്ദേശം?)</h3>
+            <p>Analyzing the rational case for monotheism, moral coherence, and divine revelation.</p>
+            <a href="article.html?id=is-islam-true" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="atheism">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">Factual Atheism</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Jan 7, 2026</span>
+            <h3>Fine-Tuning &amp; The Universe (ഫൈൻ ട്യൂണിങ് തത്വം)</h3>
+            <p>A scientific and philosophical walkthrough of cosmological fine-tuning and physical constants.</p>
+            <a href="article.html?id=fine-tuning" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="criticism">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">Islamic &amp; Criticism</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Jan 7, 2026</span>
+            <h3>Women's Freedom in Islam (ഇസ്‌ലാമും സ്ത്രീ സ്വാതന്ത്ര്യവും)</h3>
+            <p>Deconstructing orientalist caricatures and examining women's legal rights and status in Islamic
+              jurisprudence.</p>
+            <a href="article.html?id=womens-rights" class="card-link">Read Full Article <svg viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="history">
+          <div class="card-media">
+            <div class="pattern"></div><span class="tag">History</span>
+          </div>
+          <div class="card-body">
+            <span class="card-meta">Nov 15, 2025</span>
+            <h3>Andalusia: Three Faiths, One City</h3>
+            <p>A look at coexistence and conflict in Islamic Spain, without romanticizing either.</p>
+            <a href="#" class="card-link">Read article <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-foot"><a href="#" class="btn btn-dark">Load More Articles</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark"><img src="images/logo.svg" alt="Unmasking Anomalies Logo"></span>
+            <span class="en">Unmasking Anomalies</span>
+          </div>
+          <p>A platform dedicated to uncovering patterns, analyzing edge cases, and explaining anomalies with clarity,
+            patience, and evidence.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="articles.html">Creed</a></li>
+            <li><a href="articles.html">Qur'an</a></li>
+            <li><a href="articles.html">The Prophet ﷺ</a></li>
+            <li><a href="articles.html">History</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Stay Connected</h4>
+          <p>Follow along for new articles and videos as they're published.</p>
+          <div class="social-row">
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24">
+                <path
+                  d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.7-2-2C18.7 4.2 12 4.2 12 4.2s-6.7 0-8.5.5c-1 .3-1.7 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.8.5 8.5.5 8.5.5s6.7 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3zM9.8 15.3V8.7l6 3.3z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                <path
+                  d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6a4 4 0 100 8 4 4 0 000-8zm5.2-.9a1 1 0 110 2 1 1 0 010-2z" />
+              </svg></a>
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24">
+                <path d="M3 3l7.5 9.5L3.4 21H6l6-6.8L17 21h4l-7.9-10L20.6 3H18l-5.6 6.4L8 3z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Unmasking Anomalies. All rights reserved.</span>
+        <span><a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Privacy</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
